@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit || Remove</title>
+    <style>
+        body {
+            background-color: #211221;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="languages">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+
+    //Adding values
+    function addLang(langName) {
+        const myLi = document.createElement("li")
+        myLi.innerHTML = `${langName}`
+        document.querySelector(".languages").appendChild(myLi)
+
+    }
+
+    addLang("java")
+    addLang("python")
+
+
+    //Optimal way to add element
+    function addOptiLang(langName) {
+        const myLi = document.createElement('li')
+        myLi.appendChild(document.createTextNode(langName))
+        document.querySelector(".languages").appendChild(myLi)
+
+
+    }
+    addOptiLang("C++")
+
+    //Edit Elements
+    const myFirstEle = document.querySelector("li:nth-child(1)")
+    const newLi = document.createElement("li")
+    newLi.textContent = "Flutter"
+    myFirstEle.replaceWith(newLi)
+
+
+    //Edit element using outerHTML
+
+    const mySecondEle = document.querySelector("li:first-child")
+    mySecondEle.outerHTML = "<li>laravel</li>"
+
+
+    //removing element 
+
+    const lastEle = document.querySelector("li:last-child")
+    lastEle.remove();
+
+</script>
+
+</html>
