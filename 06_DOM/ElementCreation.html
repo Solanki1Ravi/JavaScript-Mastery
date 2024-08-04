@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating element</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #211221;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+
+<script>
+    const myDiv = document.createElement('div')
+
+    myDiv.className = "myFirstClass"
+
+
+    // myDiv.id= "firstId"
+
+    myDiv.id = Math.round(Math.random()*10+1)
+
+    // myDiv.setAttribute("title","generated Title")
+
+    myDiv.style.color="orange"
+    // myDiv.innerText="Ravindra singh"
+
+    // console.log(myDiv);
+
+   const addText = document.createTextNode("Hello World")
+   myDiv.appendChild(addText)
+    console.log(myDiv);
+    
+
+    document.body.appendChild(myDiv)
+</script>
+</html>
