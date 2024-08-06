@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Ravindra Singh</h2>
+    <button id="stop">Stop</button>
+
+    <h1>setTimeout():</h1>
+    <p>
+        The global setTimeout() method sets a timer which executes a function or specified piece of code once the timer
+        expires.;
+    </p>
+
+    <h1>clearTimeout():</h1>
+<p>
+    The global clearTimeout() method cancels a timeout previously established by calling setTimeout().
+</p>
+    <h1>setInterval():</h1>
+    <p>
+        The setInterval() method, offered on the Window and WorkerGlobalScope interfaces, repeatedly calls a function or
+        executes a code snippet, with a fixed time delay between each call.
+    </p>
+
+    <h1>clearInterval():</h1>
+
+
+    <p>The global clearInterval() method cancels a timed, repeating action which was previously established by a call to setInterval(). If the parameter provided does not identify a previously established action, this method does nothing.</p>
+</body>
+<script>
+
+
+    //one way
+
+    // setTimeout((){
+    //     console.log("Ravindra singh");
+
+    // },2000)
+
+
+    //Another way we pass reference of function in the setTimeOut()
+    const sayMyName = () => {
+        // console.log("Ravindra singh")
+        document.querySelector("h2").innerHTML = "Ravindra singh solanki"
+
+    }
+    let mySet = setTimeout(sayMyName, 2000)
+
+
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearTimeout(mySet)
+        console.log("Stopped");
+
+
+    })
+
+
+</script>
+
+</html>
