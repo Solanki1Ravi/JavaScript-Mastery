@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JavaScript</title>
+</head>
+<style>
+    .btn {
+        border: 1px solid black;
+        padding: 3px 3px;
+        background-color: beige;
+
+    }
+</style>
+
+<body style="background-color: #211221; color: aliceblue;">
+
+    <h2>Events on Images</h2>
+    <div>
+
+
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="photoshop"></li>
+
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+
+    </div>
+</body>
+<script>
+
+    /* Must Read in Events*/
+
+    //type of events, timeStamp,preventDefault,
+    //taget,toElement,srcElement,currentTarget
+    //clientX,clientY,screenX,screenY
+    //altkey,ctrlkey,shiftkey,keycode
+
+
+
+    //  document.getElementById("owl").onclick = ()=>{
+    //     alert("owl clicked")
+    //  }
+
+
+    //  document.getElementById("owl").addEventListener("click",()=>{
+    //     alert("owl")
+    //  },false)
+
+    //  document.getElementById("owl").addEventListener("click",(e)=>{
+    //     console.log(e);
+
+    //  },false)
+
+
+
+    // when all are true then its called eventCapturing(top to bottom)
+
+    // eventBubbling(false,false) bottom to top
+
+    // document.getElementById("images").addEventListener("click", (e) => {
+    //     console.log("clicked inside the ul");
+
+    // }, false)
+
+    // document.getElementById("owl").addEventListener("click", (e) => {
+    //     console.log("clicked on the owl");
+    //     e.stopPropagation()  //only works when the false  
+    // }, false)
+
+    document.getElementById("google").addEventListener("click", (e) => {
+        console.log("google is clicked");
+
+        e.preventDefault() //prevent the default action
+        e.stopPropagation()
+    }, false)
+
+
+
+
+    document.querySelector("#images").addEventListener("click", (e) => {
+        // console.log(e);
+        // console.log(e.target);
+        console.log(e.target.tagName);
+        
+        if(e.target.tagName==="IMG"){
+
+            let removeIt=e.target.parentNode
+            removeIt.remove()
+        }
+
+
+
+        // removeIt.parentNode.removeChild(removeIt)
+
+    })
+</script>
+
+</html>
