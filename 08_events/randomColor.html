@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Random color Generator</title>
+</head>
+<body>
+    <h1>
+    Unlimited Random color generator using the setInterval method/fucntion
+    </h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+
+<script>
+    
+    let myHex =()=>{ 
+        const hex = "0123456789ABCDEF"
+    let color = "#"
+
+    for (let i = 0; i < 6; i++) {
+        color +=hex[Math.floor(Math.random()*16)]
+       
+    }
+    return color
+
+}
+console.log(myHex());
+
+const startChangingColor = ()=>{
+   mySetId = setInterval(changeColor,1000)
+
+    function changeColor(){ document.body.style.backgroundColor = myHex()}
+}
+
+let mySetId;
+const stopChangingColor = ()=>{
+   clearInterval(mySetId)
+   mySetId = null
+}
+
+document.querySelector("#start").addEventListener("click",startChangingColor)
+
+document.querySelector("#stop").addEventListener("click",stopChangingColor)
+
+
+
+// setInterval(myHex,1000)
+
+
+</script>
+</html>
