@@ -16,7 +16,7 @@ const promiseOne = new Promise((resolve,reject)=>{
 //Consuming a promise
 
  promiseOne.then(()=>{
-//     console.log("Promise consumed");
+    console.log("Promise consumed");
      
 })
 
