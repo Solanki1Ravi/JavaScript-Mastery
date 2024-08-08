@@ -1,5 +1,5 @@
 //Creating a promise
-/*
+
 const promiseOne = new Promise((resolve,reject)=>{
     //Do an async task
     //DB calls, cryptograpy, network
@@ -11,18 +11,17 @@ const promiseOne = new Promise((resolve,reject)=>{
     },2000)
 })
 
-*/
+
 
 //Consuming a promise
 
-/* promiseOne.then(()=>{
+ promiseOne.then(()=>{
 //     console.log("Promise consumed");
      
 })
 
-    */
+    
 
-/*
 new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log("Async task 2");
@@ -42,8 +41,8 @@ const promiseThree = new Promise((resolve, reject) => {
 promiseThree.then((user) => {
   console.log(user);
 });
-*/
-/*
+
+
 const promiseFour = new Promise((resolve, reject) => {
   setTimeout(() => {
     let error = false;
@@ -69,8 +68,8 @@ promiseFour
     
   });
 
-*/
-/*
+
+
 const promiseFive = new Promise((resolve ,reject)=>{
     setTimeout(()=>{
         let error = false;
@@ -96,8 +95,8 @@ async function consumeFive(){
 }
 
 consumeFive()
-*/
-/*
+
+
 async function getAllUsers() {
   try {
     const respose = await fetch("https://api.github.com/users/Solanki1Ravi");
@@ -110,7 +109,7 @@ async function getAllUsers() {
 }
 
 getAllUsers();
-*/
+
 
 
 fetch("https://api.github.com/users/Solanki1Ravi")
