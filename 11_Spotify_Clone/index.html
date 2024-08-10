@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify - Web Player: Music for everyone</title>
+    <title>Spotify</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <link rel="stylesheet" href="utility.css">
+</head>
+
 <body>
-<nav class="navBar">
-    <ul>
-        <li class="logoImg"><img src="Media/logo.png" alt="Spotify logo">Spotify</li>
-        <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></i>Search</a></li>
+    <div class="container flex bg-black">
+        <div class="left ">
+            <div class="home  bg-gray rounded m1 p1 ">
+                <div class="logogImg">
+                    <img class="invert" src="logo.svg" alt="Spotify logo">
+                </div>
 
-        
-          
+                <ul>
+                    <li><img src="home.svg" alt="Home-icon" class="invert">Home</li>
+                    <li><img src="search.svg" alt="Search-icon" class="invert">Search</li>
+                </ul>
+
+            </div>
+
+            <div class="library bg-black bg-gray rounded m1 p1">
+
+                <div class="heading">
+                    <img src="playlist.svg" alt="PlayList " class="invert ">
+                    <h2>
+
+                        Your Library
+                    </h2>
+
+
+
+                </div>
+
+                <div class="footer">
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/" data-encore-id="textLink"><span
+                                data-encore-id="type">Legal</span></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/safetyandprivacy/" data-encore-id="textLink"><span data-encore-id="type">Privacy Center<span></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/" data-encore-id="textLink"><span
+                                data-encore-id="type">Privacy Policy</span></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/cookies-policy/" data-encore-id="textLink"><span
+                                data-encore-id="type">Cookies</span></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" data-encore-id="textLink"><span
+                                data-encore-id="type">About Ads</span></a>
+                    </div>
+
+                    <div>
+                        <a href="https://www.spotify.com/in-en/accessibility/" data-encore-id="textLink"><span
+                                data-encore-id="type">Accessibility</span></a>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
         </div>
-    </ul>
-</nav>
+        <div class="right bg-gray rounded">
 
-<div class="library">
+            <div class="header">
+                <div class="nav">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                        <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="buttons">
+                    <button>Signup</button>
+                    <button>Log in</button>
+                </div>
 
-    <div class="textLogoContainer">
-        <i class="fa-regular fa-bookmark"></i>
-        <span class="libraryTExt">Your library</span>
+            </div>
+        </div>
     </div>
-    
 
-    <div class="plusLogo">
-        <i class="fa-solid fa-plus"></i>
-    </div>
-
-
-    
-</div>
-
-
-
-    
-    <script src="script.js"></script>
 </body>
+
 </html>
