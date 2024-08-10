@@ -22,12 +22,7 @@ class User1 extends user {
     
   }
 
-  
- 
 }
-
-
-
 const MyUser = new User1("Ravindra singh","ravisolanki@gmail.com",456789)
 
 console.log(MyUser.printDetails());
