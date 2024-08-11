@@ -1,41 +1,65 @@
-.flex{
+.flex {
     display: flex;
 }
 
 
-.justify-center{
+.justify-center {
     justify-content: center;
 }
 
-.items-center{
+.items-center {
     align-items: center;
 }
-.border{
+
+.border {
     border: 2px solid red;
     margin: 3px;
 }
 
 
-.bg-black{
+.bg-black {
     background-color: black;
     color: white;
 }
 
-.invert{
+.invert {
     filter: invert(1);
 }
 
-.bg-gray{
+.bg-gray {
     background-color: #121212;
 }
 
-.rounded{
+.rounded {
     border-radius: 7px;
 }
 
-.m1{
-    margin:5px ;
+.m1 {
+    margin: 5px;
 }
-.p1{
+
+.p1 {
     padding: 10px;
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+    /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 6px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #2c2c2c;
+
 }
