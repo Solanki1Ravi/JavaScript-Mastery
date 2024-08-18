@@ -37,6 +37,7 @@ body {
 
 .heading {
     display: flex;
+    flex-direction: row;
     gap: 5px;
     width: 100%;
     padding-top: 15px;
@@ -61,17 +62,14 @@ body {
 
 
 .footer {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center;
-    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    flex-direction: row;
     font-size: 12px;
     gap: 8px;
-    position: absolute;
     bottom: 0;
     padding: 10px 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  
 
 
 }
@@ -202,7 +200,7 @@ body {
     width: 16px;
 }
 
-.langButton:hover button {
+.langButton button:hover {
     border: 1px solid white;
     transform: scale(1.04);
 }
@@ -210,11 +208,13 @@ body {
 
 
 .playBar {
-    position: absolute;
-    bottom: 0;
-    background-color: green;
+    position: fixed;
+    bottom: 25px;
+    background-color: #dad5d5;
     padding: 12px;
-    width: 92%;
+    width: 70vw;
+    filter: invert(1);
+    border-radius:5px ;
 }
 
 .songButtons {
@@ -223,7 +223,41 @@ body {
     gap: 12px;
 }
 
+.songList{
+    height: 400px;
+    overflow: auto;
+    margin-bottom: 45px 0;
+}
+.songList ul{
+    padding: 0 10px;
+}
+
 
 .songList ul li {
-    list-style-type: none;
+    list-style-type: decimal;
+    display: flex;
+    justify-content: space-between;
+    gap: 11px;
+    cursor: pointer;
+    padding: 10px 0;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin: 12px 0;
+    padding: 13px;
+}
+
+.songList .info{
+    width: 320px;
+    font-size: 14px;
+}
+
+.playNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playNow span{
+    padding: 12px;
+    font-size: 16px;
+    width: 67px;
 }
